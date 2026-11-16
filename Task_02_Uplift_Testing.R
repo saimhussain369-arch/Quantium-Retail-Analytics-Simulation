@@ -26,7 +26,7 @@ measureOverTime <- data[, .(
   avgPricePerUnit = sum(TOT_SALES)/sum(PROD_QTY)
 ), by = .(STORE_NBR, YEARMONTH)][order(STORE_NBR, YEARMONTH)]
 
-#### Filter for stores with full 12 months of data [cite: 42]
+#### Filter for stores with full 12 months of data
 storesWithFullObs <- measureOverTime[, .N, STORE_NBR][N == 12, STORE_NBR]
 measureOverTime <- measureOverTime[STORE_NBR %in% storesWithFullObs]
 
@@ -35,7 +35,7 @@ preTrialMeasures <- measureOverTime[YEARMONTH < "201902"]
 --------------------------------------
   Step - 2: Selecting the Control Store (Function)
 --------------------------------------
-  #### Function to calculate Correlation and Magnitude [cite: 65, 84]
+  #### Function to calculate Correlation and Magnitude
   calculateControlScore <- function(trial_store, metric_col) {
     
     trial_data <- preTrialMeasures[STORE_NBR == trial_store, get(metric_col)]
@@ -61,7 +61,7 @@ preTrialMeasures <- measureOverTime[YEARMONTH < "201902"]
   }
 
 #### Example: Find Control for Store 77
-# Based on the template, Store 233 is often the best match for 77 [cite: 98]
+# Based on the template, Store 233 is often the best match for 77
 control_77 <- calculateControlScore(77, "totSales")
 print(head(control_77))
 ------------------------------------
