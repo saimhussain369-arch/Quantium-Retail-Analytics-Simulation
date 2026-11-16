@@ -28,9 +28,9 @@ The Category Manager for chips needs evidence for next half-year's category plan
 
 Full report: **[Quantium_Task3_Report.pdf](Quantium_Task3_Report.pdf)** (14 slides, structured with the Pyramid Principle)
 
-![Total sales by lifestage and segment](images/01_sales_by_segment.png)
+![Total sales by lifestage and segment](01_sales_by_segment.png)
 
-![Average price per unit and t-test](images/02_price_per_unit.png)
+![Average price per unit and t-test](02_price_per_unit.png)
 
 ## Approach
 
@@ -72,7 +72,7 @@ Full report: **[Quantium_Task3_Report.pdf](Quantium_Task3_Report.pdf)** (14 slid
 | `Task_01_Customer_Analysis.R` | Cleaning, feature engineering, segmentation and t-test |
 | `Task_02_Uplift_Testing.R` | Control store selection, scaling and uplift testing |
 | `Quantium_Task3_Report.pdf` | Final strategy report for the Category Manager |
-| `images/` | Charts used in this README |
+| `01_sales_by_segment.png`, `02_price_per_unit.png` | Charts used in this README |
 
 ## Tools
 
